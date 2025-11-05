@@ -33,18 +33,18 @@ const DetailsPage = () => {
 
       <p className="py-4">{article.content}</p>
 
-      <div className="flex  justify-between m-2 sm:flex-col" >
+      <div className="flex justify-between m-2" >
 
       <a
         href={article.url}
         target="_blank"
         rel="noopener noreferrer"
-        className=" bg-[#80b9ba] text-white px-5 py-2 rounded hover:bg-[#1d305f] w-50 sm:w-1/2  text-center"
+        className=" bg-[#80b9ba] text-white px-5 py-2 rounded hover:bg-[#1d305f] w-50 text-center"
       >
         Read Full Article →
       </a>
 
-      <Link to={'/'} className=" bg-[#80b9ba] text-white px-3 py-2 rounded hover:bg-[#1d305f] w-50 text-center sm:w-1/2 sm:">Back To Home</Link>
+      <Link to={'/'} className=" bg-[#80b9ba] text-white px-5 py-2 rounded hover:bg-[#1d305f] w-50 text-center">Back To Home</Link>
       </div>
     </div>
   );
