@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const DetailsPage = () => {
   const { state } = useLocation();
@@ -33,15 +33,19 @@ const DetailsPage = () => {
 
       <p className="py-4">{article.content}</p>
 
+      <div className="flex justify-between m-2" >
+
       <a
         href={article.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-block bg-[#80b9ba] text-white px-5 py-2 rounded hover:bg-[#1d305f]"
+        className=" bg-[#80b9ba] text-white px-5 py-2 rounded hover:bg-[#1d305f] w-50 text-center"
       >
         Read Full Article →
       </a>
-      {/* </div> */}
+
+      <Link to={'/'} className=" bg-[#80b9ba] text-white px-5 py-2 rounded hover:bg-[#1d305f] w-50 text-center">Back To Home</Link>
+      </div>
     </div>
   );
 };
