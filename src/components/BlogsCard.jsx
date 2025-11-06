@@ -24,7 +24,7 @@ const BlogsCard = () => {
 
   const fetchArticles = async () => {
     try {
-      const response = await axios.get("https://newsapi.org/v2/everything?q=tesla&from=2025-10-05&sortBy=publishedAt&apiKey=8b966d015fd94ebd9c9590b0ff078835")
+      const response = await axios.get("https://newsapi.org/v2/everything?q=tesla&from=2025-10-06&sortBy=publishedAt&apiKey=8b966d015fd94ebd9c9590b0ff078835")
       console.log(response.data.articles[0])
       const data = response.data.articles
       console.log(data);
