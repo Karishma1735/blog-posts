@@ -25,7 +25,7 @@ const BlogsCard = () => {
 
   const fetchArticles = async () => {
     try {
-            const response = await axios.get(`https://newsapi.org/v2/everything?q=tesla&from=2025-10-06&sortBy=publishedAt&apiKey=${apiKey}`)
+            const response = await axios.get(`https://newsapi.org/v2/everything?q=tesla&from=2025-10-07&sortBy=publishedAt&apiKey=${apiKey}`)
       // const response = await axios.get("https://newsapi.org/v2/everything?q=tesla&from=2025-10-06&sortBy=publishedAt&apiKey=8b966d015fd94ebd9c9590b0ff078835")
       console.log(response.data.articles[0])
       const data = response.data.articles
@@ -93,7 +93,7 @@ const BlogsCard = () => {
         <div className="flex flex-wrap justify-center gap-8 p-8">
           {currentPosts.map((article, index) => {
             // const isFavourites = favourites.includes(article);
-            const isFavourites = favourites.some(fav => fav.url === article.url);
+            const isFavourites = favourites.find(fav => fav.url === article.url);
 
 
             return (

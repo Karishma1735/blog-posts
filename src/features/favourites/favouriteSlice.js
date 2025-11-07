@@ -17,7 +17,7 @@ const favouriteSlice = createSlice({
         // },
 
      togglefavourites: (state, action) => {
-    if (state.items.some(item => item.url === action.payload.url)) {
+    if (state.items.find(item => item.url === action.payload.url)) {
         state.items = state.items.filter(item => item.url !== action.payload.url);
     } else {
         state.items.push(action.payload);
